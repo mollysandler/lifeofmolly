@@ -91,7 +91,7 @@ export default function Contact() {
             />
           </div>
 
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full border-2 border-red-500">
             Send Message
           </Button>
         </motion.form>

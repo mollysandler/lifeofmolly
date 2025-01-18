@@ -24,12 +24,19 @@ const projects = [
     tags: ["JavaScript", "AWS", "Arduino", "API Integration", "Game Development"]
   },
   {
+    title: "Kontinua Foundation",
+    description: "Collaborated with a team over a few weeks to develop a full stack recipe management app featuring ingredient uploads, recipe tagging, and other similar functionality, targeted at people living away from home for their first time. I worked on the backend development using Python and PostgreSQL, creating an API to interact with the frontend.",
+    image: "https://www.lifewire.com/thmb/aO6Lvtc4rO9i2q_E1jB76NUmtzM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/photopea-online-picture-editor-5bead7d446e0fb00267a5ac1.png",
+    link: "#",
+    tags: ["Swift", "XCode", "UI/UX Design", "Client Relations"]
+  },
+  {
     title: "Open-Recipes",
     description: "Collaborated with a team over a few weeks to develop a full stack recipe management app featuring ingredient uploads, recipe tagging, and other similar functionality, targeted at people living away from home for their first time. I worked on the backend development using Python and PostgreSQL, creating an API to interact with the frontend.",
     image: "https://www.lifewire.com/thmb/aO6Lvtc4rO9i2q_E1jB76NUmtzM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/photopea-online-picture-editor-5bead7d446e0fb00267a5ac1.png",
     link: "#",
     tags: ["Python", "PostgreSQL", "API Development", "Full Stack"]
-  },
+  }
 ]
 
 export default function Home() {
@@ -46,15 +53,15 @@ export default function Home() {
             className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-5xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400 md:text-6xl lg:text-7xl"
             variants={fadeIn("up", "tween", 0, 0.5)}
           >
-            Welcome to Molly&apos;s World
+            Welcome to Molly's World
           </motion.h1>
           
           <motion.p 
             className="mt-6 text-lg text-gray-600 dark:text-gray-300"
             variants={fadeIn("up", "tween", 0.2, 0.5)}
           >
-            I&apos;m a developer with a passion for building interactive and dynamic web experiences. 
-            I&apos;m currently attending Cal Poly SLO as a fourth year Software Engineering major with a minor in 
+            I'm a developer with a passion for building interactive and dynamic web experiences. 
+            I'm currently attending Cal Poly SLO as a fourth year Software Engineering major with a minor in 
             Entrepreneurship. I have experience with Python, Java, SQL, Javascript, React, Typescript, and Git.
           </motion.p>
 
@@ -85,7 +92,7 @@ export default function Home() {
                 key={path}
                 variant={index === 0 ? "default" : "outline"}
                 size="lg"
-                className="min-w-[140px]"
+                className="min-w-[140px] bg-pink-200 hover:scale-105 text-gray-800 hover:bg-pink-300 dark:text-gray-200"
                 asChild
               >
                 <a href={path}>{label}</a>
@@ -242,17 +249,15 @@ export default function Home() {
                   <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
                     {project.title}
                   </h3>
-                  <p className="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
                   <div className="mb-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <Badge key={tag} variant="secondary" className=" 0 bmin-w-[140px] bg-pink-200 hover: text-gray-800 hover:bg-pink-300 dark:text-gray-200">
                         {tag}
                       </Badge>
                     ))}
                   </div>
-                  <Button asChild>
-                    <a href={project.link}>Learn More</a>
-                  </Button>
+                  <p className="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+
                 </div>
               </motion.div>
             ))}
@@ -359,7 +364,7 @@ export default function Home() {
               />
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full 0 bmin-w-[140px] bg-pink-200 hover: text-gray-800 hover:bg-pink-300 dark:text-gray-200">
               Send Message
             </Button>
           </motion.form>
@@ -401,4 +406,3 @@ export default function Home() {
     </main>
   )
 }
-

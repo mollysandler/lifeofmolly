@@ -22,12 +22,19 @@ const projects = [
     tags: ["JavaScript", "AWS", "Arduino", "API Integration", "Game Development"]
   },
   {
+    title: "Kontinua Foundation",
+    description: "Collaborated with a team over a few weeks to develop a full stack recipe management app featuring ingredient uploads, recipe tagging, and other similar functionality, targeted at people living away from home for their first time. I worked on the backend development using Python and PostgreSQL, creating an API to interact with the frontend.",
+    image: "../public/reteti.png",
+    link: "#",
+    tags: ["Swift", "XCode", "UI/UX Design", "Client Relations"]
+  },
+  {
     title: "Open-Recipes",
     description: "Collaborated with a team over a few weeks to develop a full stack recipe management app featuring ingredient uploads, recipe tagging, and other similar functionality, targeted at people living away from home for their first time. I worked on the backend development using Python and PostgreSQL, creating an API to interact with the frontend.",
     image: "../public/reteti.png",
     link: "#",
     tags: ["Python", "PostgreSQL", "API Development", "Full Stack"]
-  },
+  }
 ]
 
 export default function Projects() {

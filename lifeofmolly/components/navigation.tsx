@@ -11,7 +11,10 @@ import { useTheme } from "@/components/theme-provider"
 export function Navigation() {
   const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const theme = useTheme()
+
+  // Add null check with optional chaining
+  const { theme: currentTheme, setTheme, hasMounted } = theme ?? {}
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +23,11 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Only render when the theme is initialized
+  if (!hasMounted) {
+    return null; 
+  }
 
   return (
     <motion.header
@@ -34,7 +42,7 @@ export function Navigation() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
-            Molly&apos;s World
+            Molly's World
           </Link>
           <div className="flex items-center gap-6">
             {[
@@ -64,7 +72,17 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => {
+                if (!setTheme) return;  // Add early return if setTheme is undefined
+                
+                if (currentTheme === "dark") {
+                  setTheme("light");
+                } else if (currentTheme === "light") {
+                  setTheme("system");
+                } else {
+                  setTheme("dark");
+                }
+              }}
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
@@ -76,4 +94,3 @@ export function Navigation() {
     </motion.header>
   )
 }
-

@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Moon, Sun } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { useTheme } from "@/components/theme-provider"
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/theme-provider";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -12,31 +12,32 @@ const navItems = [
   { id: "projects", label: "Projects" },
   { id: "photos", label: "Photos" },
   { id: "contact", label: "Contact" },
-]
+];
 
 export function ScrollSpy() {
-  const [activeSection, setActiveSection] = useState("")
-  const { theme, setTheme } = useTheme()
+  const [activeSection, setActiveSection] = useState("");
+  const themeContext = useTheme();
+  const { theme, setTheme } = themeContext ?? {};
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
       { threshold: 0.5 }
-    )
+    );
 
     navItems.forEach((item) => {
-      const element = document.getElementById(item.id)
-      if (element) observer.observe(element)
-    })
+      const element = document.getElementById(item.id);
+      if (element) observer.observe(element);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.nav
@@ -72,16 +73,21 @@ export function ScrollSpy() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => {
+                if (!setTheme) return;
+                setTheme(theme === "dark" ? "light" : "dark");
+              }}
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
+              <Moon
+                color="white"
+                className="absolute h-5 w-5 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100"
+              />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </div>
         </div>
       </div>
     </motion.nav>
-  )
+  );
 }
-

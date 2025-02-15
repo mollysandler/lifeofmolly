@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import exclusive from "@/public/about/exclusive.png";
 import slomotion from "@/public/about/motion.jpeg";
-// import reteti from "@/public/about/reteti-logo.png";
 import reteti from "@/public/about/reteti.png";
 
 const AboutSection = () => {

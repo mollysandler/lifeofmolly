@@ -12,7 +12,7 @@ const HomeSection = () => {
   const { theme } = themeContext ?? {};
 
   const handleDownload = () => {
-    const resumePath = "/mollysandlerresume.pdf"; // Update with your resume path
+    const resumePath = "/mollysandlerresume.pdf";
     const link = document.createElement("a");
     link.href = resumePath;
     link.download = "Molly_Sandler_Resume.pdf";

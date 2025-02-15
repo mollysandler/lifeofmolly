@@ -7,7 +7,8 @@ import Image from "next/image";
 
 import exclusive from "@/public/about/exclusive.png";
 import slomotion from "@/public/about/motion.jpeg";
-import reteti from "@/public/about/reteti-logo.png";
+// import reteti from "@/public/about/reteti-logo.png";
+import reteti from "@/public/about/reteti.png";
 
 const AboutSection = () => {
   const themeContext = useTheme();
@@ -259,8 +260,8 @@ const AboutSection = () => {
                   Etsy shop for my pieces, which you can check out{" "}
                   <a
                     href="#"
-                    className={`text-purple-400 hover:underline ${
-                      theme === "dark" ? "dark:text-purple-300" : ""
+                    className={`text-pink-400 hover:underline ${
+                      theme === "dark" ? "dark:text-pink-300" : ""
                     }`}
                   >
                     here

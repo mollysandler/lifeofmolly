@@ -15,7 +15,7 @@ const HomeSection = () => {
     const resumePath = "/mollysandlerresume.pdf";
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "Molly_Sandler_Resume.pdf";
+    link.download = "Molly_Sandler_Software_Resume.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
@@ -75,7 +75,7 @@ const HomeSection = () => {
         </motion.div>
 
         <motion.div
-          className="mt-12 flex flex-wrap justify-center gap-4"
+          className="mt-12 flex flex-wrap justify-center gap-4 md:flex-nowrap" // Added md:flex-nowrap
           variants={fadeIn("up", "tween", 0.6, 0.5)}
         >
           {[
@@ -83,7 +83,7 @@ const HomeSection = () => {
             ["View Photos", "#photos"],
             ["View Projects", "#projects"],
             ["Get In Touch", "#contact"],
-            ["Resume"],
+            ["Resume", ""],
           ].map(([label, path], index) => (
             <Button
               key={label}

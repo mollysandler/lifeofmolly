@@ -14,7 +14,13 @@ const projects = [
     title: "Reteti Elephant Sanctuary",
     description: `Worked with a team to fix Reteti's data storage system to properly connect to their frontend to their backend. This new system will accurately save all donations, milk bottle purchases, elephant adoptions, and other inputs into Salesforce. Also implementing these connections for their sister company, The Sarara Foundation. See more about elephant adoptions <a href="https://www.reteti.org/adoptions" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">here</a>.`,
     image: retetiImage,
-    tags: ["Salesforce", "JavaScript", "Data Management", "API Integration"],
+    tags: [
+      "Salesforce",
+      "JavaScript",
+      "Data Management",
+      "API Integration",
+      "Legacy code",
+    ],
   },
   {
     title: "Kontinua Foundation",
@@ -27,8 +33,7 @@ const projects = [
   },
   {
     title: "DogWorld",
-    description:
-      "A multiplayer game where a user controls a dog character using instruction blocks to complete levels. Also has a sandbox mode where users can create, save, and play their own levels. Integrates a weather API, uses AWS for the multiplayer connection, and has an arduino bluetooth dog that is controlled by the instruction blocks as well.",
+    description: `A multiplayer game where a user controls a dog character using instruction blocks to complete levels. Also has a sandbox mode where users can create, save, and play their own levels. Integrates a weather API, uses AWS for the multiplayer connection, and has an arduino bluetooth dog that is controlled by the instruction blocks as well. Check out our <a href="https://github.com/mollysandler/DogWorld" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">repository</a>.`,
     image:
       "https://www.lifewire.com/thmb/aO6Lvtc4rO9i2q_E1jB76NUmtzM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/photopea-online-picture-editor-5bead7d446e0fb00267a5ac1.png",
     link: "#",

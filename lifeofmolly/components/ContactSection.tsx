@@ -9,7 +9,7 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 import { useTheme } from "@/components/theme-provider";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactSection = () => {
   const themeContext = useTheme();

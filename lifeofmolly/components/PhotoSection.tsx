@@ -4,10 +4,25 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 import { useTheme } from "@/components/theme-provider";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 const PhotosSection = () => {
   const themeContext = useTheme();
   const { theme } = themeContext ?? {};
+
+  const imageData = [
+    { src: "/gallery/arches.jpg", caption: "Arches National Park" },
+    { src: "/gallery/friends.jpg", caption: "Friends in SLO" },
+    { src: "/gallery/craterlake.jpg", caption: "Crater Lake" },
+    { src: "/gallery/beans.jpg", caption: "Me and Beans" },
+    { src: "/gallery/frisbee.jpg", caption: "Ultimate Frisbee" },
+    { src: "/gallery/colorado.JPG", caption: "Colorado" },
+    { src: "/gallery/dixpeak.jpg", caption: "Dix Peak" },
+    { src: "/gallery/trot.jpg", caption: "Turkey Trot" },
+    { src: "/gallery/tswift.jpg", caption: "Taylor Swift Concert" },
+  ];
+
   return (
     <section
       id="photos"
@@ -32,27 +47,17 @@ const PhotosSection = () => {
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
-          {[
-            "/gallery/arches.jpg",
-            "/gallery/friends.jpg",
-            "/gallery/craterlake.jpg",
-            "/gallery/beans.jpg",
-            "/gallery/frisbee.jpg",
-            "/gallery/colorado.JPG",
-            "/gallery/dixpeak.jpg",
-            "/gallery/trot.jpg",
-            "/gallery/tswift.jpg",
-          ].map((photo, index) => (
+          {imageData.map((photo, index) => (
             <motion.div
               key={index}
               variants={fadeIn("up", "tween", index * 0.1, 0.5)}
-              className={`relative overflow-hidden rounded-lg shadow-lg ${
+              className={`relative overflow-hidden rounded-lg shadow-lg cursor-pointer ${
                 theme === "dark" ? "border border-gray-700" : ""
               }`}
               style={{ aspectRatio: "1/1", maxWidth: "400px" }}
             >
               <Image
-                src={photo}
+                src={photo.src}
                 alt={`Gallery photo ${index + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

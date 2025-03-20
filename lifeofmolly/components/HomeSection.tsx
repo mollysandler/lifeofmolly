@@ -80,9 +80,9 @@ const HomeSection = () => {
         >
           {[
             ["About Me", "#about"],
-            ["View Photos", "#photos"],
-            ["View Projects", "#projects"],
-            ["Get In Touch", "#contact"],
+            ["Photos", "#photos"],
+            ["Projects", "#projects"],
+            ["Contact", "#contact"],
             ["Resume", ""],
           ].map(([label, path], index) => (
             <Button

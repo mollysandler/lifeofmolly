@@ -215,18 +215,14 @@ const AboutSection = () => {
                   />
                   Ultimate Frisbee
                 </h4>
-                You can wrap the apostrophe within a JavaScript string literal:
-                ```javascript
                 <p
                   className={` ${theme === "dark" ? "text-gray-100" : "text-gray-700"}`}
                 >
-                  I started playing ultimate frisbee in middle school, and have
+                  {`I started playing ultimate frisbee in middle school, and have
                   been playing ever since! I currently play for Cal Poly San
-                  Luis Obispo {"women's"} ultimate (SLO Motion), Santa Barbara
-                  mixed gender ultimate (Robot), and pickup frisbee wherever I
-                  am!
+                  Luis Obispo women's ultimate (SLO Motion), Santa Barbara mixed
+                  gender ultimate (Robot), and pickup frisbee wherever I am!`}
                 </p>
-                ```
               </div>
               <div>
                 <h4

@@ -220,8 +220,9 @@ const AboutSection = () => {
                 >
                   I started playing ultimate frisbee in middle school, and have
                   been playing ever since! I currently play for Cal Poly San
-                  Luis Obispo women's ultimate (SLO Motion), Santa Barbara mixed
-                  gender ultimate (Robot), and pickup frisbee wherever I am!``
+                  Luis Obispo women&apos;s ultimate (SLO Motion), Santa Barbara
+                  mixed gender ultimate (Robot), and pickup frisbee wherever I
+                  am!
                 </p>
               </div>
               <div>

@@ -216,9 +216,7 @@ const AboutSection = () => {
                   Ultimate Frisbee
                 </h4>
                 <p
-                  className={` ${
-                    theme === "dark" ? "text-gray-100" : "text-gray-700"
-                  }`}
+                  className={` ${theme === "dark" ? "text-gray-100" : "text-gray-700"}`}
                 >
                   I started playing ultimate frisbee in middle school, and have
                   been playing ever since! I currently play for Cal Poly San

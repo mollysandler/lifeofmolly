@@ -14,11 +14,12 @@ import toast, { Toaster } from "react-hot-toast";
 const ContactSection = () => {
   const themeContext = useTheme();
   const { theme } = themeContext ?? {};
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
     setIsSubmitting(true);
 
     emailjs
@@ -32,7 +33,9 @@ const ContactSection = () => {
         (result) => {
           console.log(result.text);
           toast.success("Message sent successfully!");
-          form.current.reset();
+          if (form.current) {
+            form.current.reset();
+          }
         },
         (error) => {
           console.log(error.text);

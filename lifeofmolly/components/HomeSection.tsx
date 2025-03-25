@@ -85,7 +85,7 @@ const HomeSection = () => {
             ["Projects", "#projects"],
             ["Contact", "#contact"],
             ["Resume", ""],
-          ].map(([label, path], index) => (
+          ].map(([label, path]) => (
             <Button
               key={label}
               size="lg"

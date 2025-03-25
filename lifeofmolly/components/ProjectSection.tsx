@@ -13,7 +13,8 @@ import dogWorld from "@/public/projects/dogWorld.png";
 const projects = [
   {
     title: "Reteti Elephant Sanctuary",
-    description: `Worked with a team to fix Reteti's data storage system to properly connect to their frontend to their backend. This new system will accurately save all donations, milk bottle purchases, elephant adoptions, and other inputs into Salesforce. Also implementing these connections for their sister company, The Sarara Foundation. See more about elephant adoptions <a href="https://www.reteti.org/adoptions" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">here</a>.`,
+    description: `hello`,
+    // description: `Worked with a team to fix Reteti's data storage system to properly connect to their frontend to their backend. This new system will accurately save all donations, milk bottle purchases, elephant adoptions, and other inputs into Salesforce. Also implementing these connections for their sister company, The Sarara Foundation. See more about elephant adoptions <a href="https://www.reteti.org/adoptions" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">here</a>.`,
     image: retetiImage,
     tags: [
       "Salesforce",

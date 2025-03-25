@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 import { useTheme } from "@/components/theme-provider";
-import { useState } from "react";
-import { X } from "lucide-react";
 
 const PhotosSection = () => {
   const themeContext = useTheme();

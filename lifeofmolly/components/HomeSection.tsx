@@ -43,7 +43,8 @@ const HomeSection = () => {
           }
           variants={fadeIn("up", "tween", 0, 0.5)}
         >
-          Welcome to Molly's World
+          Welcome to
+          {/* Molly's World */}
         </motion.h1>
 
         <motion.p
@@ -52,8 +53,8 @@ const HomeSection = () => {
           }`}
           variants={fadeIn("up", "tween", 0.2, 0.5)}
         >
-          I'm a developer with a passion for building interactive and dynamic
-          web experiences. I'm currently attending Cal Poly SLO as a fourth year
+          {/* I'm a developer with a passion for building interactive and dynamic */}
+          {/* web experiences. I'm currently attending Cal Poly SLO as a fourth year */}
           Software Engineering major with a minor in Entrepreneurship. I have
           experience with Python, Java, SQL, Javascript, React, Typescript, and
           Git.

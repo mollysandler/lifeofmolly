@@ -1,20 +1,21 @@
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from "@/components/theme-provider"
-import { ScrollSpy } from "@/components/scroll-spy"
-import { Analytics } from "@/components/analytics"
-import "./globals.css"
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollSpy } from "@/components/scroll-spy";
+// import { Analytics } from "@/components/analytics"
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Molly's World - Software Engineer",
-  description: "Software engineer with a passion for building interactive and dynamic web experiences.",
-}
+  description:
+    "Software engineer with a passion for building interactive and dynamic web experiences.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -42,11 +43,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen bg-background text-foreground`}>
+      <body
+        className={`${inter.className} min-h-screen bg-background text-foreground`}
+      >
         <ThemeProvider defaultTheme="system" storageKey="ui-theme">
           <ScrollSpy />
           {children}
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>

@@ -38,7 +38,7 @@ const HomeSection = () => {
         <motion.h1
           className={
             theme === "dark"
-              ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl whitespace-nowrap"
+              ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl"
               : "text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-7xl"
           }
           variants={fadeIn("up", "tween", 0, 0.5)}

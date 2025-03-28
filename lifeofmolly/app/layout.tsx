@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollSpy } from "@/components/scroll-spy";
-// import { Analytics } from "@/components/analytics"
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -45,7 +45,7 @@ export function Navigation() {
             href="/"
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
-            {/* Molly's World */}
+            Molly&apos;s World
           </Link>
           <div className="flex items-center gap-6">
             {[

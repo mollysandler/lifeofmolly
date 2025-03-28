@@ -209,7 +209,7 @@ const AboutSection = () => {
                   }`}
                 >
                   <Image
-                    src={slomotion} // Replace with actual icon URL or use an appropriate SVG
+                    src={slomotion}
                     alt="Ultimate Frisbee Icon"
                     className="h-8 w-8 mr-2 object-contain"
                   />

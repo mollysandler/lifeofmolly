@@ -38,13 +38,12 @@ const HomeSection = () => {
         <motion.h1
           className={
             theme === "dark"
-              ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl"
+              ? "bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl whitespace-nowrap"
               : "text-5xl font-extrabold text-gray-900 md:text-6xl lg:text-7xl"
           }
           variants={fadeIn("up", "tween", 0, 0.5)}
         >
-          Welcome to
-          {/* Molly's World */}
+          Welcome to Molly&apos;s World
         </motion.h1>
 
         <motion.p
@@ -53,11 +52,11 @@ const HomeSection = () => {
           }`}
           variants={fadeIn("up", "tween", 0.2, 0.5)}
         >
-          {/* I'm a developer with a passion for building interactive and dynamic */}
-          {/* web experiences. I'm currently attending Cal Poly SLO as a fourth year */}
-          Software Engineering major with a minor in Entrepreneurship. I have
-          experience with Python, Java, SQL, Javascript, React, Typescript, and
-          Git.
+          I&apos;m a developer with a passion for building interactive and
+          dynamic web experiences. I&apos;m currently attending Cal Poly SLO as
+          a fourth year Software Engineering major with a minor in
+          Entrepreneurship. I have experience with Python, Java, SQL,
+          Javascript, React, Typescript, and Git.
         </motion.p>
 
         <motion.div
